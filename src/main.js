@@ -50,27 +50,17 @@ startBtn.onclick = () => {
 
 
 function monster() {
-    if (gameOver) return;
+  if (gameOver) return;
 
-const delay = Math.random() * 2000 + 500;
-setTimeout(() => {
-    eyesAreOpen = !eyesAreOpen;
-        eyesClosed.style.display = eyesAreOpen ? 'none' : 'block';
-        eyesOpen.style.display = eyesAreOpen ? 'block' : 'none';
+  eyesAreOpen = !eyesAreOpen;
 
-        if (eyesAreOpen) {
-            const openDuration = Math.random() * 2000 + 500; 
-            setTimeout(() => {
-                eyesAreOpen = false;
-                eyesClosed.style.display = 'block';
-                eyesOpen.style.display = 'none';
-                monsterLoop();
-            }, openDuration);
-        } else {
-            monster();
-        }
-    }, delay);
+  eyesClosed.style.display = eyesAreOpen ? 'none' : 'block';
+  eyesOpen.style.display = eyesAreOpen ? 'block' : 'none';
+
+  const delay = Math.random() * 2000 + 500;
+  setTimeout(monster, delay);
 }
+
 
 
 freeze.ontouchstart = () => frozen = true;
