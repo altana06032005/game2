@@ -67,7 +67,7 @@ setTimeout(() => {
                 monsterLoop();
             }, openDuration);
         } else {
-            monsterLoop();
+            monster();
         }
     }, delay);
 }
