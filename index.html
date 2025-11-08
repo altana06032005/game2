@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./src/style.css">
     <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Ballet:opsz@16..72&family=Kirang+Haerang&family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id ='start'>Start</div>
+      <div id = 'cc'>
+        <img id='preview' src="./src/preview.png" >
+    </div>
+    <div id ='start'>Start
+        
+    </div>
     <div id ='task'>괴물에게 잡혔지만, 그가 안 보고 있을 때 도망쳐 봐!</div>
     <div id="timer" style="display:none;">01:00</div>
-    <img id='eyesClosed' src="./src/closed.jpeg" style="display:none;">
-    <img id='eyesOpen' src="./src/open.jpeg" style="display:none;">
-    <div id='player' style="display:none;">🏃🏻</div>
-    <div id='door' style="display:none;">🚪</div>
-    <div id='freeze' style="display:none;">Freeze</div>
+    <div id ='cont' style="display:none">
+        <div id='door' style="display:none;">
+        <img id ='doorIcon' src="./src/door1.jpg">
+    </div>
+        <img id='eyesClosed' src="./src/monstersleep1.png" style="display:none;">
+        <img id='eyesOpen' src="./src/monster1.png" style="display:none;">   
+    </div>
+    <audio id ='danger' src="./src/danger.mp3" loop></audio>
+    <audio id ='screamer' src="./src/screamer.mp3"></audio>
+    <audio id ='creepy' src="./src/creepy.mp3"></audio>
+    <div id='player' style="display:none;">
+        <img id ='icon' src="./src/playerIcon.png">
+    </div>
     <div id='move' style="display:none;">Move</div>
-    <div id = 'message'></div>
+    
+    <div id = 'end' style="display:none;">
+        <div id = 'message'></div>
+        <img id = 'death' src="./src/angry.png" style="display:none;">
+        <div id = 'again' style="display:none;">Again</div>
+        <div id = 'home' style="display:none;">Home</div>
+    </div>
+    
     <script type="module" src="./src/main.js"></script>
 </body>
 
