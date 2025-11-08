@@ -293,7 +293,7 @@ move.onclick = () => {
     } else {
     const doorLeft = door.offsetLeft;
     const doorTop = door.offsetTop;
-    const step = 20;
+    const step = 15;
 
     positionLeft = Math.min(positionLeft + step, doorLeft);
     player.style.left = positionLeft + "px";
