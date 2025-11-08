@@ -102,6 +102,22 @@ function showTaskText() {
     }, 2000);
 
 }
+function win() {
+    gameOver = true;
+    clearInterval(timerInterval);
+    creepy.pause();
+
+    message.style.display = 'inline-block';
+    message.textContent = "도망쳤어! 🎉";
+
+    cont.style.display = 'none';
+    timerDisplay.style.display = 'none';
+    move.style.display = 'none';
+    player.style.display = 'none';
+    end.style.display = 'inline-block';
+    again.style.display = 'inline-block';
+    home.style.display = 'inline-block';
+}
 
 function triggerScreamer(reasonMessage) {
     if (gameOver) return; 
@@ -277,7 +293,7 @@ move.onclick = () => {
     } else {
     const doorLeft = door.offsetLeft;
     const doorTop = door.offsetTop;
-    const step = 15;
+    const step = 20;
 
     positionLeft = Math.min(positionLeft + step, doorLeft);
     player.style.left = positionLeft + "px";
@@ -285,9 +301,7 @@ move.onclick = () => {
     player.style.top = positionTop + "px";
 
     if (positionTop <=doorTop && doorLeft >= positionLeft ) {
-        message.textContent = "도망쳤어! 🎉";
-        gameOver = true;
-
+        win();
         }
 
     }
